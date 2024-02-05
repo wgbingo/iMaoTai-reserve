@@ -9,7 +9,7 @@ on:
     paths:
       - '.github/workflows/**'
   schedule:
-    - cron: '15 1 * * *' #每日9点15分执行任务，目标时间减8
+    - cron: '30 0,1 * * *' # 每日9点15分执行任务，目标时间减8
 
 env:
   TZ: Asia/Shanghai
