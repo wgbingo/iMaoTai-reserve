@@ -9,7 +9,7 @@ on:
     paths:
       - '.github/workflows/**'
   schedule:
-    - cron: '30 0,1 * * *' # 每日9点15分执行任务，目标时间减8
+    - cron: '*/5 * * * *' #'30 0,1 * * *' # 每日9点15分执行任务，目标时间减8
 
 env:
   TZ: Asia/Shanghai
@@ -48,7 +48,8 @@ jobs:
           PUSHPLUS_KEY: ${{ secrets.PUSHPLUS_KEY }}
           PRIVATE_AES_KEY: ${{ secrets.PRIVATE_AES_KEY }}
         run: |
-          python main.py
+          #python main.py
+          print("666666")
 
 #        pip install flake8 pytest
 #        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
