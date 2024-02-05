@@ -75,9 +75,9 @@ for section in configs.sections():
             if not r_success:
                 s_title = '！！失败！！茅台预约'
             s_content = s_content + r_content + shopInfo + "\n"
-            time.sleep(10)
+            time.sleep(5)
         # 领取小茅运和耐力值
-        time.sleep(20)
+        time.sleep(15) # 测试延时15秒
         g_content = process.getUserEnergyAward(mobile)
         s_content += g_content
     except BaseException as e:
